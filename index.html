@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://github.com/favicon.ico" type="image/x-icon">
+  <title>DMF - Discord Message Formatter</title>
+  <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="wrapper">
+    <div id="discordposter">
+      <h2>Discord Poster</h2><br />
+      <form id="form">
+        <label>URL</label>
+        <input type="text" id="url" autocomplete="off" placeholder="https://..." name="url" />
+        <label>Date <small>KST</small></label>
+        <input type="text" id="date" placeholder="YYMMDD" name="date" />
+        <label>Title</label>
+        <input type="text" id="title" placeholder="aespa 에스파 'Spicy' MV..." name="title" />
+        <img id="image" /><br />
+        <label>Description <small>optional</small></label>
+        <input type="text" id="desc" value="" name="description" />
+        <br><br>
+        <input type="button" id="copy" disabled="true" value="Copy" />&nbsp;
+        <input type="button" id="reset" value="Reset" /><span id="copied"></span>
+        <div><code id="converted">Fill the fields and hit 'Copy'!</code></div>
+      </form>
+      <span id="cr"><small><small>&copy; 2023 aespaholic</small></small></span>
+    </div>
+  </div>
+  <script src="dmf.js"></script>
+  <script type="text/javascript" src="https://momentjs.com/downloads/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+</body>
+</html>
