@@ -39,9 +39,9 @@ inputs.forEach((elem) => {
    	}
     if ([url(), date(), title()].every(k => k.value != '')) {
     	copy().disabled = false
-      converted().textContent = await `\`${date().value.trim()}\` **${title().value.trim()}**${
+      converted().textContent = `\`${date().value.trim()}\` **${title().value.trim()}**${
       	desc().value.trim().length ? '\n*'+desc().value.trim()+'*\n' : '\n'}${
-        !url().value.match(/http/) ? 'https://'+url().value.trim() : url().value.trim()}`
+          'https://www.youtube.com/watch?v='+url().value.trim().split(ytId)[1]}`
     } else {
     	converted().textContent = fill
       copy().disabled = true
