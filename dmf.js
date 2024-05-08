@@ -1,8 +1,16 @@
+
+/** 
+ * DMF 1.0 
+ * -------------------------------
+ * (c) aeholic 
+ * https://aeholic.github.io/dmf
+ */
+
 const [el, date, title, desc, url, copy, reset, copied, converted, image, fill, yt, ytId] = [
 	_ => document.querySelector(_), _ => el('#date'), _ => el('#title'), 
   _ => el('#desc'), _ => el('#url'), _ => el('#copy'), _ => el('#reset'), 
   _ => el('#copied'), _ => el('#converted'), _ => el('#image'),
-  'Fill the fields and hit \'Copy\'!', /youtu\.?be/, /watch\?v=|\.be\//
+  'Fill the fields and hit \'Copy\'!', /youtu\.?be/, /watch\?v=|\.be\/|[\?|&].+/
 ]
 
 const fetchYT = async (url) => {
