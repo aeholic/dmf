@@ -6,10 +6,10 @@
 html, body {
   font-family: 'Tahoma', sans-serif;
   background: #111;
-  margin: 5px;
   h2 {
     font-size: 1.5rem;
     color: violet;
+    margin: 0;
   }
 }
 
@@ -75,7 +75,7 @@ div {
     #discordposter {
       padding: 10px;
       background: black;
-      transform: scale(1.3) translate(0px, 100px);
+      transform: scale(1.3) translate(0px, 40px);
       width: 480px;
       overflow: hidden;
     }
