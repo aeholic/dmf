@@ -1,7 +1,7 @@
 /**
  * DMF 1.0
  * -------------------------------
- * (c) aeholic
+ * (c) 2022 aeholic
  * https://aeholic.github.io/dmf
  */
 
