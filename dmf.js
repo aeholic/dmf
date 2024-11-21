@@ -34,7 +34,7 @@ inputs.forEach((elem) => {
 
 		if (elem.id == 'url') date().value = moment().utcOffset(540).format('YYMMDD')
 		if (url().value.trim().match(yt) || [url(), date(), title()].every((k) => k.value != '')) {
-      const id = event.target.value.trim().split(ytId)[event.target.value.trim().split(ytId).length - 1].split(/&.*/)[1]
+      const id = event.target.value.trim().split(ytId)[event.target.value.trim().split(ytId).length - 1].split(/&.*/)[0]
 
 			try {
 				title().value = (await fetchYT(id)) || ''
