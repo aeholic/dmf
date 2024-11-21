@@ -34,7 +34,7 @@ inputs.forEach((elem) => {
 
 		if (elem.id == 'url') date().value = moment().utcOffset(540).format('YYMMDD')
 		if (url().value.trim().match(yt) || [url(), date(), title()].every((k) => k.value != '')) {
-      const id = event.target.value.trim().split(ytId)[event.target.value.trim().split(ytId).length - 1].split(/&.*/)[0]
+      const id = event.target.value.trim().split(ytId)[event.target.value.trim().split(ytId).length - 1].split(/&.*/)[1]
 
 			try {
 				title().value = (await fetchYT(id)) || ''
@@ -42,7 +42,8 @@ inputs.forEach((elem) => {
 			} catch (error) {}
 
 			copy().disabled = false
-			converted().textContent = `\`${date().value.trim()}\` **${title().value.trim()}**${desc().value.trim().length ? '\n*' + desc().value.trim() + '*\n' : '\n'}${'https://youtu.be/' + id}`
+			converted().textContent = `\`${date().value.trim()}\` **${title().value.trim()}**${desc().value.trim().length ? '\n*' 
+				+ desc().value.trim() + '*\n' : '\n'}${'https://youtu.be/' + id}`
 		} else {
 			converted().textContent = fill
 			copy().disabled = true
